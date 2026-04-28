@@ -1,0 +1,123 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2573ff;
+  --ifm-color-primary-dark: #0f62f0;
+  --ifm-color-primary-darker: #0a5be0;
+  --ifm-color-primary-darkest: #084bb9;
+  --ifm-color-primary-light: #4a8dff;
+  --ifm-color-primary-lighter: #65a0ff;
+  --ifm-color-primary-lightest: #9cc2ff;
+  --ifm-background-color: #f8fbff;
+  --ifm-font-family-base: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ifm-code-font-size: 95%;
+  --ifm-navbar-height: 4.25rem;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #6db4ff;
+  --ifm-color-primary-dark: #4a9fff;
+  --ifm-color-primary-darker: #358fff;
+  --ifm-color-primary-darkest: #0c6fe8;
+  --ifm-color-primary-light: #94c8ff;
+  --ifm-color-primary-lighter: #b1d7ff;
+  --ifm-color-primary-lightest: #d8ebff;
+  --ifm-background-color: #0b1220;
+  --ifm-navbar-background-color: rgba(11, 18, 32, 0.88);
+  --ifm-footer-background-color: #070d18;
+  --docusaurus-highlighted-code-line-bg: rgba(109, 180, 255, 0.16);
+}
+
+.navbar {
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  box-shadow: none;
+}
+
+.navbar__brand {
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.navbar__logo img {
+  border-radius: 0.75rem;
+}
+
+.theme-doc-markdown {
+  font-size: 1.03rem;
+}
+
+.codeRecipeModeToggles {
+  align-items: center;
+  display: flex;
+  gap: 0.45rem;
+}
+
+.codeRecipeModeToggles button {
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 999px;
+  color: var(--ifm-font-color-base);
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 0.45rem 0.7rem;
+}
+
+.codeRecipeModeToggles button[aria-pressed='true'] {
+  background: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+  color: #ffffff;
+}
+
+.code-recipe-focus-mode .theme-doc-sidebar-container {
+  display: none;
+}
+
+.code-recipe-focus-mode .main-wrapper:has(.theme-doc-sidebar-container) .container {
+  max-width: 960px;
+}
+
+.code-recipe-focus-mode .theme-doc-toc-desktop {
+  opacity: 0.28;
+  transition: opacity 160ms ease;
+}
+
+.code-recipe-focus-mode .theme-doc-toc-desktop:hover {
+  opacity: 1;
+}
+
+.code-recipe-ide-mode {
+  --ifm-background-color: #1e222a;
+  --ifm-navbar-background-color: #171a21;
+  --ifm-card-background-color: #21252b;
+  --ifm-footer-background-color: #171a21;
+  --ifm-font-color-base: #d7dae0;
+  --ifm-color-emphasis-100: #252a33;
+  --ifm-color-emphasis-200: #303642;
+  --ifm-color-emphasis-300: #3b4250;
+  --ifm-color-emphasis-700: #b8c0cc;
+}
+
+.code-recipe-ide-mode article {
+  background:
+    linear-gradient(90deg, rgba(109, 180, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(#21252b, #21252b);
+  background-size: 3.5rem 3.5rem, auto;
+  border: 1px solid #303642;
+  border-radius: 1.2rem;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 996px) {
+  .codeRecipeModeToggles {
+    padding: 0.5rem 0.75rem;
+  }
+}
