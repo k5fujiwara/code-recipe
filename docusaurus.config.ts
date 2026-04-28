@@ -14,11 +14,6 @@ const config: Config = {
   tagline: 'マネして、学んで、作り出す。君だけの開発レシピ集。',
   favicon: 'img/favicon.svg',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
-  future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
-  },
-
   // Set the production url of your site here.
   // Example: https://your-github-user.github.io
   url: `https://${githubUserName}.github.io`,
@@ -70,6 +65,11 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: false,
     },
+    docs: {
+      sidebar: {
+        hideable: true,
+      },
+    },
     navbar: {
       title: 'Code Recipe',
       logo: {
@@ -88,10 +88,6 @@ const config: Config = {
           sidebarId: 'algorithmsSidebar',
           position: 'left',
           label: 'アルゴリズム',
-        },
-        {
-          type: 'custom-codeRecipeModes',
-          position: 'right',
         },
         {
           href: `https://github.com/${githubUserName}/${repositoryName}`,
@@ -139,6 +135,10 @@ const config: Config = {
             {
               label: 'BeEngineer公式サイト',
               href: 'https://be-engineer.tech/',
+            },
+            {
+              label: 'AIZU ONLINE JUDGE',
+              href: 'https://judge.u-aizu.ac.jp/onlinejudge/index.jsp',
             },
           ],
         },
