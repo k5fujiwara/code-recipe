@@ -50,10 +50,17 @@ def binary_search(numbers, target):
 
     return -1
 
-
 print(binary_search([1, 3, 4, 5, 8], 5))
 ```
 
-## 問いかけ
+## AOJで挑戦してみよう！
 
-二分探索を使う前に、データはどんな状態になっている必要がありますか？
+<div className="aojChallenge">
+  <p className="aojChallenge__message">学んだレシピを実際に使って、ジャッジから「Accepted（正解）」を勝ち取ろう！</p>
+  <div className="aojChallenge__links">
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_4_B&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">ALDS1_4_B: Binary Search</span>
+      <span className="aojChallenge__icon" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</div>

@@ -54,7 +54,6 @@ def depth_first_search(graph, start):
     visit(start)
     return order
 
-
 graph = {
     "A": ["B", "C"],
     "B": ["D"],
@@ -66,6 +65,14 @@ graph = {
 print(depth_first_search(graph, "A"))
 ```
 
-## 問いかけ
+## AOJで挑戦してみよう！
 
-迷路を探索するとき、深さ優先探索はどんな場面で使いやすそうですか？
+<div className="aojChallenge">
+  <p className="aojChallenge__message">学んだレシピを実際に使って、ジャッジから「Accepted（正解）」を勝ち取ろう！</p>
+  <div className="aojChallenge__links">
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_11_B&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">ALDS1_11_B: Depth First Search</span>
+      <span className="aojChallenge__icon" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</div>

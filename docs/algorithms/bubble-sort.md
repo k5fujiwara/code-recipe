@@ -48,16 +48,21 @@ def bubble_sort(numbers):
 
     return result
 
-
 print(bubble_sort([5, 3, 8, 1, 4]))
 ```
-
-## 中学生への問いかけ
-
-- 1回目に右端へ移動する数字はどれでしょう？
-- `if result[i] > result[i + 1]:` の `>` を `<` に変えると、どんな順番になりますか？
-- 人数が2倍になったら、背比べの回数はどのくらい増えそうですか？
 
 ## まとめ
 
 バブルソートは、考え方がわかりやすい並び替えです。一方で、人数や数字が多くなると比べる回数が増えやすいので、大きなデータにはもっと速い方法を使うことがあります。
+
+## AOJで挑戦してみよう！
+
+<div className="aojChallenge">
+  <p className="aojChallenge__message">学んだレシピを実際に使って、ジャッジから「Accepted（正解）」を勝ち取ろう！</p>
+  <div className="aojChallenge__links">
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_2_A&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">ALDS1_2_A: Bubble Sort</span>
+      <span className="aojChallenge__icon" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</div>

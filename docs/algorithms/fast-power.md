@@ -44,7 +44,6 @@ def fast_power(base, exponent):
         exponent //= 2
     return result
 
-
 print(fast_power(2, 10))
 ```
 
@@ -58,6 +57,14 @@ print(fast_power(2, 10))
 
 普通にかけると `O(n)` ですが、くり返し二乗法では `O(log n)` になります。
 
-## 問いかけ
+## AOJで挑戦してみよう！
 
-指数を半分にしていくと、計算回数はどう変わりそうですか？
+<div className="aojChallenge">
+  <p className="aojChallenge__message">学んだレシピを実際に使って、ジャッジから「Accepted（正解）」を勝ち取ろう！</p>
+  <div className="aojChallenge__links">
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">NTL_1_B: Power</span>
+      <span className="aojChallenge__icon" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</div>

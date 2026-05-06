@@ -78,10 +78,17 @@ def sieve_of_eratosthenes(limit):
 
     return primes
 
-
 print(sieve_of_eratosthenes(30))
 ```
 
-## 問いかけ
+## AOJで挑戦してみよう！
 
-なぜ `2 * 2`、`3 * 3` のように、その数を2回かけたところから倍数を消し始めてもよいのでしょう？
+<div className="aojChallenge">
+  <p className="aojChallenge__message">学んだレシピを実際に使って、ジャッジから「Accepted（正解）」を勝ち取ろう！</p>
+  <div className="aojChallenge__links">
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">ALDS1_1_C: Prime Numbers</span>
+      <span className="aojChallenge__icon" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</div>

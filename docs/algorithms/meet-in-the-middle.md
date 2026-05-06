@@ -41,7 +41,6 @@ def subset_sums(numbers):
         sums += [value + number for value in sums]
     return sums
 
-
 numbers = [3, 5, 8, 10]
 left = subset_sums(numbers[:2])
 right = subset_sums(numbers[2:])
@@ -57,7 +56,3 @@ print(left, right)
 ## 注意点
 
 半分全列挙は、全探索よりは軽くなりますが、それでも候補数は多いです。ソートや二分探索と組み合わせることがよくあります。
-
-## 問いかけ
-
-全部を一度に調べるより、半分に分けるとどんな工夫ができますか？

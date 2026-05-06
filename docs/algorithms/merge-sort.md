@@ -52,7 +52,6 @@ def merge_sort(numbers):
 
     return result + left + right
 
-
 print(merge_sort([5, 3, 8, 1, 4]))
 ```
 
@@ -66,6 +65,14 @@ print(merge_sort([5, 3, 8, 1, 4]))
 
 マージソートは、分ける回数が少なく、合体では全体を1回ずつ見るため、だいたい `O(n log n)` で動きます。
 
-## 問いかけ
+## AOJで挑戦してみよう！
 
-先にバラバラに分けると、なぜ合体するときに並べやすくなるのでしょう？
+<div className="aojChallenge">
+  <p className="aojChallenge__message">学んだレシピを実際に使って、ジャッジから「Accepted（正解）」を勝ち取ろう！</p>
+  <div className="aojChallenge__links">
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_5_B&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">ALDS1_5_B: Merge Sort</span>
+      <span className="aojChallenge__icon" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</div>

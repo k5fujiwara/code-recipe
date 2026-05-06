@@ -41,7 +41,6 @@ flowchart LR
 ```python
 import heapq
 
-
 def dijkstra(graph, start):
     distances = {node: float("inf") for node in graph}
     distances[start] = 0
@@ -62,7 +61,6 @@ def dijkstra(graph, start):
 
     return distances
 
-
 graph = {
     "A": [("B", 2), ("C", 5)],
     "B": [("C", 1), ("D", 4)],
@@ -73,6 +71,14 @@ graph = {
 print(dijkstra(graph, "A"))
 ```
 
-## 問いかけ
+## AOJで挑戦してみよう！
 
-「一番近い地点から確定する」と、なぜ遠回りの道を後から見つけても迷いにくいのでしょう？
+<div className="aojChallenge">
+  <p className="aojChallenge__message">学んだレシピを実際に使って、ジャッジから「Accepted（正解）」を勝ち取ろう！</p>
+  <div className="aojChallenge__links">
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_12_B&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">ALDS1_12_B: Single Source Shortest Path</span>
+      <span className="aojChallenge__icon" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</div>

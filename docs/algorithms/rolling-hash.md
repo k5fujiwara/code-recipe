@@ -52,7 +52,6 @@ def rolling_hash(text, length):
             result.append(value)
     return result
 
-
 print(rolling_hash("abcde", 3))
 ```
 
@@ -66,7 +65,3 @@ print(rolling_hash("abcde", 3))
 ## 注意点
 
 ハッシュ値が同じでも、文字列が必ず同じとは限りません。必要なら最後に本当に一致しているか確認します。
-
-## 問いかけ
-
-文字列を毎回切り出して比べる代わりに、数字で比べると何が速くなりますか？

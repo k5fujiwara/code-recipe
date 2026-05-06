@@ -55,10 +55,17 @@ def quick_sort(numbers):
 
     return quick_sort(smaller) + [pivot] + quick_sort(bigger)
 
-
 print(quick_sort([5, 3, 8, 1, 4]))
 ```
 
-## 問いかけ
+## AOJで挑戦してみよう！
 
-数字のカードが10枚あるとき、あなたならどのカードを基準にして分けますか？
+<div className="aojChallenge">
+  <p className="aojChallenge__message">学んだレシピを実際に使って、ジャッジから「Accepted（正解）」を勝ち取ろう！</p>
+  <div className="aojChallenge__links">
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_6_C&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">ALDS1_6_C: Quick Sort</span>
+      <span className="aojChallenge__icon" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</div>

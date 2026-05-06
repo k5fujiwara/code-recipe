@@ -51,10 +51,17 @@ def insertion_sort(numbers):
 
     return result
 
-
 print(insertion_sort([5, 3, 8, 1, 4]))
 ```
 
-## 問いかけ
+## AOJで挑戦してみよう！
 
-すでにほとんど並んでいる数字なら、挿入ソートは速そうでしょうか？それとも遅そうでしょうか？
+<div className="aojChallenge">
+  <p className="aojChallenge__message">学んだレシピを実際に使って、ジャッジから「Accepted（正解）」を勝ち取ろう！</p>
+  <div className="aojChallenge__links">
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_A&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">ALDS1_1_A: Insertion Sort</span>
+      <span className="aojChallenge__icon" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</div>

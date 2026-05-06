@@ -44,10 +44,17 @@ def linear_search(numbers, target):
 
     return -1
 
-
 print(linear_search([5, 3, 8, 1, 4], 8))
 ```
 
-## 問いかけ
+## AOJで挑戦してみよう！
 
-探している数字が最後にあったら、何回くらべる必要があるでしょう？
+<div className="aojChallenge">
+  <p className="aojChallenge__message">学んだレシピを実際に使って、ジャッジから「Accepted（正解）」を勝ち取ろう！</p>
+  <div className="aojChallenge__links">
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_4_A&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">ALDS1_4_A: Linear Search</span>
+      <span className="aojChallenge__icon" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</div>

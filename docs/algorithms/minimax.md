@@ -56,11 +56,6 @@ def minimax(scores, is_my_turn):
 
     return min(next_scores)
 
-
 game_tree = [[1, -1], [0, 1]]
 print(minimax(game_tree, True))
 ```
-
-## 問いかけ
-
-自分にとって一番よさそうな手でも、相手の返しで負けるなら、その手を選ぶべきでしょうか？

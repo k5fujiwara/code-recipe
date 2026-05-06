@@ -69,10 +69,5 @@ def heap_sort(numbers):
 
     return result
 
-
 print(heap_sort([5, 3, 8, 1, 4]))
 ```
-
-## 問いかけ
-
-「いちばん大きい数字をすぐ見つけられる形」を作っておくと、どんな場面で役立ちそうですか？

@@ -38,7 +38,6 @@ flowchart TB
 ```python
 import random
 
-
 def monte_carlo_dice(trials):
     wins = 0
 
@@ -51,10 +50,5 @@ def monte_carlo_dice(trials):
 
     return wins / trials
 
-
 print(monte_carlo_dice(10000))
 ```
-
-## 問いかけ
-
-試す回数を100回から10000回に増やすと、予想はどう変わりそうですか？

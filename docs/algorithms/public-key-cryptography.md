@@ -40,10 +40,8 @@ flowchart LR
 def encrypt(message, public_key, n):
     return pow(message, public_key, n)
 
-
 def decrypt(cipher, private_key, n):
     return pow(cipher, private_key, n)
-
 
 n = 33
 public_key = 3
@@ -56,7 +54,3 @@ plain = decrypt(cipher, private_key, n)
 print(cipher)
 print(plain)
 ```
-
-## 問いかけ
-
-公開鍵をみんなに見せてもよいのに、なぜ秘密鍵は絶対に見せてはいけないのでしょう？

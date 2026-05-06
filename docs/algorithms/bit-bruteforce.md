@@ -56,6 +56,14 @@ for bit in range(1 << len(items)):
 
 要素数が増えるとパターン数が一気に増えます。20個を超えるとかなり重くなることがあります。
 
-## 問いかけ
+## AOJで挑戦してみよう！
 
-3個なら8通りです。10個なら何通りになるでしょう？
+<div className="aojChallenge">
+  <p className="aojChallenge__message">学んだレシピを実際に使って、ジャッジから「Accepted（正解）」を勝ち取ろう！</p>
+  <div className="aojChallenge__links">
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_5_A&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">ALDS1_5_A: Exhaustive Search</span>
+      <span className="aojChallenge__icon" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</div>

@@ -56,7 +56,6 @@ def build_lps(pattern):
 
     return lps
 
-
 def kmp_search(text, pattern):
     lps = build_lps(pattern)
     positions = []
@@ -78,7 +77,6 @@ def kmp_search(text, pattern):
 
     return positions
 
-
 print(kmp_search("abracadabra", "abra"))
 ```
 
@@ -92,6 +90,14 @@ print(kmp_search("abracadabra", "abra"))
 
 KMP法は最初は難しく感じます。まずは「本文の位置をなるべく戻さない」工夫だと捉えましょう。
 
-## 問いかけ
+## AOJで挑戦してみよう！
 
-途中まで一致した情報をメモしておくと、なぜ同じ文字を何度も比べずに済むのでしょう？
+<div className="aojChallenge">
+  <p className="aojChallenge__message">学んだレシピを実際に使って、ジャッジから「Accepted（正解）」を勝ち取ろう！</p>
+  <div className="aojChallenge__links">
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_14_A&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">ALDS1_14_A: Naive String Search</span>
+      <span className="aojChallenge__icon" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</div>

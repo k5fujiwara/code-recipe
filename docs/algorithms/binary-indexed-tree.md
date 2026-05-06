@@ -49,7 +49,6 @@ class BIT:
             index -= index & -index
         return total
 
-
 bit = BIT(5)
 bit.add(1, 2)
 bit.add(2, 4)
@@ -65,7 +64,3 @@ print(bit.sum(2))
 ## 注意点
 
 BITは1始まりの番号で考えることが多いです。0始まりの配列と混ざるとズレやすいので注意しましょう。
-
-## 問いかけ
-
-累積和と違って値を途中で更新できると、どんな問題で役立ちそうですか？

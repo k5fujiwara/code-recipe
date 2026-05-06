@@ -47,11 +47,6 @@ def simple_hash(text):
 
     return result
 
-
 print(simple_hash("code"))
 print(simple_hash("recipe"))
 ```
-
-## 問いかけ
-
-ハッシュ値が同じになったら、元の文字列も必ず同じだと言えるでしょうか？

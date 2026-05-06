@@ -64,6 +64,14 @@ print(dist)
 
 3重ループなので `O(n^3)` です。頂点が多すぎる場合は重くなります。
 
-## 問いかけ
+## AOJで挑戦してみよう！
 
-「どこを経由してもよい」と考えると、なぜ全地点どうしの距離が分かるのでしょう？
+<div className="aojChallenge">
+  <p className="aojChallenge__message">学んだレシピを実際に使って、ジャッジから「Accepted（正解）」を勝ち取ろう！</p>
+  <div className="aojChallenge__links">
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">GRL_1_C: All Pairs Shortest Path</span>
+      <span className="aojChallenge__icon" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</div>

@@ -49,7 +49,6 @@ class UnionFind:
     def union(self, a, b):
         self.parent[self.find(a)] = self.find(b)
 
-
 uf = UnionFind(5)
 uf.union(1, 2)
 uf.union(2, 3)
@@ -67,6 +66,14 @@ print(uf.find(1) == uf.find(3))
 
 本格的には、木が深くなりすぎないようにサイズやランクを使って合体します。このページでは考え方を優先しています。
 
-## 問いかけ
+## AOJで挑戦してみよう！
 
-友だち関係や島のつながりを調べるとき、どんな使い方ができそうですか？
+<div className="aojChallenge">
+  <p className="aojChallenge__message">学んだレシピを実際に使って、ジャッジから「Accepted（正解）」を勝ち取ろう！</p>
+  <div className="aojChallenge__links">
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">DSL_1_A: Disjoint Set Union</span>
+      <span className="aojChallenge__icon" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</div>

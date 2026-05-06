@@ -54,6 +54,14 @@ print(heapq.heappop(queue))
 
 大きい値を優先したい場合は、値にマイナスをつけて入れる方法がよく使われます。
 
-## 問いかけ
+## AOJで挑戦してみよう！
 
-救急や締切の近いタスクでは、普通のキューより便利そうでしょうか？
+<div className="aojChallenge">
+  <p className="aojChallenge__message">学んだレシピを実際に使って、ジャッジから「Accepted（正解）」を勝ち取ろう！</p>
+  <div className="aojChallenge__links">
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_9_C&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">ALDS1_9_C: Priority Queue</span>
+      <span className="aojChallenge__icon" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</div>

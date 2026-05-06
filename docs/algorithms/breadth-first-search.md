@@ -40,7 +40,6 @@ flowchart TB
 ```python
 from collections import deque
 
-
 def breadth_first_search(graph, start):
     visited = {start}
     queue = deque([start])
@@ -57,7 +56,6 @@ def breadth_first_search(graph, start):
 
     return order
 
-
 graph = {
     "A": ["B", "C"],
     "B": ["D"],
@@ -69,6 +67,14 @@ graph = {
 print(breadth_first_search(graph, "A"))
 ```
 
-## 問いかけ
+## AOJで挑戦してみよう！
 
-スタートから一番少ない移動回数で行ける場所を探すなら、深さ優先探索と幅優先探索のどちらが向いていそうですか？
+<div className="aojChallenge">
+  <p className="aojChallenge__message">学んだレシピを実際に使って、ジャッジから「Accepted（正解）」を勝ち取ろう！</p>
+  <div className="aojChallenge__links">
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_11_C&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">ALDS1_11_C: Breadth First Search</span>
+      <span className="aojChallenge__icon" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</div>

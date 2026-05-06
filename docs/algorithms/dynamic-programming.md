@@ -61,10 +61,21 @@ def fibonacci(n):
 
     return answers[n]
 
-
 print(fibonacci(10))
 ```
 
-## 問いかけ
+## AOJで挑戦してみよう！
 
-同じ計算を何度もくり返すプログラムは、どんな工夫をすると速くできそうですか？
+<div className="aojChallenge">
+  <p className="aojChallenge__message">学んだレシピを実際に使って、ジャッジから「Accepted（正解）」を勝ち取ろう！</p>
+  <div className="aojChallenge__links">
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_10_A&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">ALDS1_10_A: Fibonacci Number</span>
+      <span className="aojChallenge__icon" aria-hidden="true">↗</span>
+    </a>
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_10_C&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">ALDS1_10_C: Longest Common Subsequence</span>
+      <span className="aojChallenge__icon" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</div>

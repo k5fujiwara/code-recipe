@@ -42,7 +42,6 @@ def factorial(n):
         return 1
     return n * factorial(n - 1)
 
-
 print(factorial(4))
 ```
 
@@ -55,7 +54,3 @@ print(factorial(4))
 ## 注意点
 
 止まる条件がないと、関数が自分を呼び続けてエラーになります。
-
-## 問いかけ
-
-再帰には、なぜ「止まる条件」が必要なのでしょう？

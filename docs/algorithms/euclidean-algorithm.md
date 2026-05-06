@@ -39,10 +39,17 @@ def gcd(a, b):
 
     return a
 
-
 print(gcd(48, 18))
 ```
 
-## 問いかけ
+## AOJで挑戦してみよう！
 
-48cm × 18cm の長方形を同じ正方形で埋めるなら、1辺6cmより大きい正方形は使えるでしょうか？
+<div className="aojChallenge">
+  <p className="aojChallenge__message">学んだレシピを実際に使って、ジャッジから「Accepted（正解）」を勝ち取ろう！</p>
+  <div className="aojChallenge__links">
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_B&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">ALDS1_1_B: Greatest Common Divisor</span>
+      <span className="aojChallenge__icon" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</div>

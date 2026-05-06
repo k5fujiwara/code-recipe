@@ -48,7 +48,6 @@ def factorize(n):
         result.append(n)
     return result
 
-
 print(factorize(60))
 ```
 
@@ -62,6 +61,14 @@ print(factorize(60))
 
 この方法は分かりやすい一方、とても大きな数では時間がかかります。まずは仕組みを理解するための基本形です。
 
-## 問いかけ
+## AOJで挑戦してみよう！
 
-なぜ同じ素数で割れるだけ割り続けるのでしょう？
+<div className="aojChallenge">
+  <p className="aojChallenge__message">学んだレシピを実際に使って、ジャッジから「Accepted（正解）」を勝ち取ろう！</p>
+  <div className="aojChallenge__links">
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">NTL_1_A: Prime Factorization</span>
+      <span className="aojChallenge__icon" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</div>

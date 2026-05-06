@@ -54,6 +54,14 @@ print(queue)
 
 普通のリストで先頭を取り出すと遅くなることがあります。キューには `deque` を使うのが基本です。
 
-## 問いかけ
+## AOJで挑戦してみよう！
 
-順番待ちを公平に処理したいとき、スタックとキューのどちらが向いていますか？
+<div className="aojChallenge">
+  <p className="aojChallenge__message">学んだレシピを実際に使って、ジャッジから「Accepted（正解）」を勝ち取ろう！</p>
+  <div className="aojChallenge__links">
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_3_B&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">ALDS1_3_B: Queue</span>
+      <span className="aojChallenge__icon" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</div>

@@ -43,7 +43,6 @@ def combination(n, r):
         result = result * (n - i) // (i + 1)
     return result
 
-
 print(combination(5, 2))
 ```
 
@@ -56,7 +55,3 @@ print(combination(5, 2))
 ## 注意点
 
 とても大きな数を扱う場合や、余りを取りたい場合は、別の工夫が必要になります。
-
-## 問いかけ
-
-「AさんとBさん」と「BさんとAさん」は、組み合わせでは別の選び方でしょうか？

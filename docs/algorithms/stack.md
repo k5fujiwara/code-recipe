@@ -55,6 +55,14 @@ print(stack)
 
 空のスタックから `pop()` するとエラーになります。取り出す前に中身があるか確認しましょう。
 
-## 問いかけ
+## AOJで挑戦してみよう！
 
-ブラウザの「戻る」ボタンは、スタックに似ているでしょうか？
+<div className="aojChallenge">
+  <p className="aojChallenge__message">学んだレシピを実際に使って、ジャッジから「Accepted（正解）」を勝ち取ろう！</p>
+  <div className="aojChallenge__links">
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_3_A&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">ALDS1_3_A: Stack</span>
+      <span className="aojChallenge__icon" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</div>
