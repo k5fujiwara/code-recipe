@@ -21,7 +21,12 @@ const sidebars: SidebarsConfig = {
         type: 'doc',
         id: 'development/index',
       },
-      items: ['development/github-signup', 'development/accounts-and-api'],
+      items: [
+        'development/github-signup',
+        'development/project-setup-and-token',
+        'development/quiz-code-template',
+        'development/accounts-and-api',
+      ],
     },
   ],
   algorithmsSidebar: [
@@ -73,6 +78,8 @@ const sidebars: SidebarsConfig = {
             'algorithms/dijkstra',
             'algorithms/bellman-ford',
             'algorithms/warshall-floyd',
+            'algorithms/tree-diameter',
+            'algorithms/topological-sort',
             'algorithms/kruskal',
             'algorithms/prim',
           ],
@@ -81,6 +88,7 @@ const sidebars: SidebarsConfig = {
           type: 'category',
           label: '数学アルゴリズム',
           items: [
+            'algorithms/prime-guide',
             'algorithms/sieve-of-eratosthenes',
             'algorithms/euclidean-algorithm',
             'algorithms/prime-factorization',
@@ -108,8 +116,11 @@ const sidebars: SidebarsConfig = {
           label: '戦略・典型解法',
           items: [
             'algorithms/bit-bruteforce',
+            'algorithms/eight-queens',
             'algorithms/recursion',
             'algorithms/dynamic-programming',
+            'algorithms/zero-one-knapsack',
+            'algorithms/longest-increasing-subsequence',
             'algorithms/sliding-window',
             'algorithms/imos',
             'algorithms/greedy',
@@ -120,6 +131,7 @@ const sidebars: SidebarsConfig = {
       ],
     },
   ],
+  contestSidebar: ['contest/aoj-roadmap'],
 };
 
 export default sidebars;

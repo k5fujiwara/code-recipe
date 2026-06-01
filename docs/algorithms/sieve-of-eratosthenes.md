@@ -84,10 +84,18 @@ print(sieve_of_eratosthenes(30))
 ## AOJで挑戦してみよう！
 
 <div className="aojChallenge">
-  <p className="aojChallenge__message">学んだレシピを実際に使って、ジャッジから「Accepted（正解）」を勝ち取ろう！</p>
+  <p className="aojChallenge__message">範囲内の素数をまとめて扱う問題で、エラトステネスの篩を使ってみよう。</p>
   <div className="aojChallenge__links">
-    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C&lang=ja" target="_blank" rel="noopener noreferrer">
-      <span className="aojChallenge__label">ALDS1_1_C: Prime Numbers</span>
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0009&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">0009: Prime Number</span>
+      <span className="aojChallenge__icon" aria-hidden="true">↗</span>
+    </a>
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0044&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">0044: Prime Number II</span>
+      <span className="aojChallenge__icon" aria-hidden="true">↗</span>
+    </a>
+    <a className="aojChallenge__button" href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0151&lang=ja" target="_blank" rel="noopener noreferrer">
+      <span className="aojChallenge__label">0151: Twin Prime</span>
       <span className="aojChallenge__icon" aria-hidden="true">↗</span>
     </a>
   </div>

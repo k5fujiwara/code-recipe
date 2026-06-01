@@ -20,4 +20,6 @@ description: Code Recipe の開発系レシピ一覧
 ## おすすめ
 
 - [GitHubの登録方法](./github-signup)
+- [プロジェクト立ち上げとトークン発行](./project-setup-and-token)
+- [学習クイズテンプレート QuizCode](./quiz-code-template)
 - [SNSやAPI連携の準備](./accounts-and-api)

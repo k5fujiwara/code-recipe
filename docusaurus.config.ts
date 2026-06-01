@@ -90,6 +90,12 @@ const config: Config = {
           label: 'アルゴリズム',
         },
         {
+          type: 'docSidebar',
+          sidebarId: 'contestSidebar',
+          position: 'left',
+          label: 'AOJロードマップ',
+        },
+        {
           href: `https://github.com/${githubUserName}/${repositoryName}`,
           label: 'GitHub',
           position: 'right',
@@ -109,6 +115,10 @@ const config: Config = {
             {
               label: 'アルゴリズム',
               to: '/docs/algorithms/',
+            },
+            {
+              label: 'AOJロードマップ',
+              to: '/docs/contest/aoj-roadmap',
             },
           ],
         },
@@ -139,6 +149,23 @@ const config: Config = {
             {
               label: 'AIZU ONLINE JUDGE',
               href: 'https://judge.u-aizu.ac.jp/onlinejudge/index.jsp',
+            },
+          ],
+        },
+        {
+          title: 'Legal',
+          items: [
+            {
+              label: 'プライバシーポリシー',
+              to: '/privacy-policy',
+            },
+            {
+              label: 'お問い合わせ',
+              to: '/contact',
+            },
+            {
+              label: '運営者情報',
+              to: '/operator',
             },
           ],
         },
