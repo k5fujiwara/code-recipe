@@ -2,9 +2,11 @@
 sidebar_position: 4
 title: 学習クイズテンプレート QuizCode
 description: GitHubで公開しているQuizCodeを使って学習クイズアプリを作る
+hide_table_of_contents: true
 ---
 
 import TemplateHero from '@site/src/components/TemplateHero';
+import TOCCollapsible from '@theme/TOCCollapsible';
 import quizCodeScreenshot from '@site/static/img/templates/quizcode-screenshot.png';
 
 # 学習クイズテンプレート QuizCode
@@ -20,6 +22,8 @@ import quizCodeScreenshot from '@site/static/img/templates/quizcode-screenshot.p
   <p>QuizCodeは、JSONを書き換えるだけでオリジナルの学習クイズを作成できる、HTML / CSS / JavaScript製の静的Webアプリテンプレートです。</p>
   <p>サーバーやデータベースを使わずに動くため、GitHubからコードを取得してすぐに中身を確認できます。作成したクイズはGitHub Pagesで公開でき、URLを共有すればブラウザ上で遊べます。</p>
 </TemplateHero>
+
+<TOCCollapsible toc={toc} />
 
 ## できること
 
@@ -78,10 +82,19 @@ QuizCode/
 
 ## 開発の始め方
 
-GitHubで自分用のリポジトリを作り、ローカルのプロジェクト直下でGitHubと紐付けます。
+まずは、公開されているQuizCodeを `git clone` でローカルPCに取得します。
 
 ```shell
-git init
+git clone https://github.com/k5fujiwara/QuizCode.git
+cd QuizCode
+```
+
+これで、QuizCodeのファイル一式が手元のPCにコピーされます。あとは中身を編集して、自分用のクイズアプリに改造していきます。
+
+自分のGitHubアカウントへ保存したい場合は、GitHubで新しいリポジトリを作成し、リモートURLを差し替えてからpushします。
+
+```shell
+git remote remove origin
 git remote add origin https://github.com/ユーザー名/リポジトリ名.git
 git add .
 git commit -m "first commit"
@@ -89,7 +102,7 @@ git branch -M main
 git push -u origin main
 ```
 
-公開されているQuizCodeを参考にする場合は、GitHub上のファイルを見ながら、自分のプロジェクトへ必要なファイルを取り込んでください。
+`git remote add origin ...` のURLは、自分がGitHubで作ったリポジトリのURLに置き換えます。
 
 ## ローカルで確認する
 

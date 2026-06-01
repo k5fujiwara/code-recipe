@@ -1,0 +1,6 @@
+{
+  "theme.TOCCollapsible.toggleButtonLabel": {
+    "message": "目次",
+    "description": "The label used by the button on the collapsible TOC component"
+  }
+}
