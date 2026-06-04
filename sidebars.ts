@@ -131,7 +131,17 @@ const sidebars: SidebarsConfig = {
       ],
     },
   ],
-  contestSidebar: ['contest/aoj-roadmap'],
+  contestSidebar: [
+    {
+      type: 'category',
+      label: '競技・対策',
+      link: {
+        type: 'doc',
+        id: 'contest/index',
+      },
+      items: ['contest/joi-guide', 'contest/aoj-roadmap'],
+    },
+  ],
 };
 
 export default sidebars;

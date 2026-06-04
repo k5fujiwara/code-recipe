@@ -25,6 +25,12 @@ const recipeCards = [
     description: 'GitHubの登録方法や、SNS・API連携に必要な準備をまとめて確認しよう。',
     to: '/docs/development/github-signup',
   },
+  {
+    title: '情報オリンピックに挑戦',
+    badge: 'Contest',
+    description: 'JOIの公式フローと、AOJ・AtCoderでの練習の進め方をまとめて確認しよう。',
+    to: '/docs/contest/joi-guide',
+  },
 ];
 
 function HomepageHeader() {

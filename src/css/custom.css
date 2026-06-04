@@ -67,6 +67,116 @@ a `::before` layer avoids that trap.
 
 .theme-doc-markdown {
   font-size: 1.03rem;
+  line-height: 1.75;
+  word-break: normal;
+  overflow-wrap: break-word;
+  line-break: strict;
+}
+
+.theme-doc-markdown p,
+.theme-doc-markdown li,
+.theme-admonition p,
+.theme-admonition li {
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+/* 長いURLは単語の途中で折り返し（SPのはみ出し防止） */
+.theme-doc-markdown a[href^='http'] {
+  overflow-wrap: anywhere;
+}
+
+/* Mermaid: SP/PC 共通。縮小表示と横スクロールで1文字改行を防ぐ */
+.theme-doc-markdown .mermaid {
+  margin: 1.25rem 0 1.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  text-align: center;
+}
+
+.theme-doc-markdown .mermaid svg {
+  display: block;
+  max-width: 100%;
+  height: auto !important;
+  margin: 0 auto;
+}
+
+.theme-doc-markdown .mermaid .nodeLabel,
+.theme-doc-markdown .mermaid .label,
+.theme-doc-markdown .mermaid .edgeLabel p {
+  white-space: nowrap;
+  line-height: 1.35;
+}
+
+.theme-doc-markdown .mermaid .node rect,
+.theme-doc-markdown .mermaid .node polygon {
+  min-width: 2.5rem;
+}
+
+/* 表: 狭い画面では横スクロール */
+.theme-doc-markdown table {
+  display: table;
+  width: 100%;
+  max-width: 100%;
+  table-layout: auto;
+  margin-bottom: 1rem;
+}
+
+.theme-doc-markdown table th,
+.theme-doc-markdown table td {
+  vertical-align: top;
+  padding: 0.55rem 0.75rem;
+  line-height: 1.6;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 996px) {
+  .theme-doc-markdown table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    min-width: 100%;
+  }
+
+  .theme-doc-markdown table thead,
+  .theme-doc-markdown table tbody {
+    display: table;
+    width: 100%;
+    min-width: 18rem;
+  }
+
+  .theme-doc-markdown table th {
+    white-space: nowrap;
+  }
+}
+
+/* PC: 本文カラムを広げる */
+@media (min-width: 997px) {
+  .theme-doc-markdown {
+    max-width: 52rem;
+  }
+
+  [class*='docItemCol'] {
+    max-width: 100% !important;
+  }
+
+  .theme-doc-markdown table {
+    width: 100%;
+  }
+
+  .theme-doc-markdown table th {
+    white-space: nowrap;
+  }
+
+  .theme-doc-markdown table a {
+    word-break: normal;
+  }
+
+  .theme-doc-markdown p,
+  .theme-doc-markdown li {
+    text-wrap: pretty;
+  }
 }
 
 .aojChallenge {

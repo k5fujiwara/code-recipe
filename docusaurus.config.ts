@@ -93,7 +93,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'contestSidebar',
           position: 'left',
-          label: 'AOJロードマップ',
+          label: '競技・対策',
         },
         {
           href: `https://github.com/${githubUserName}/${repositoryName}`,
@@ -115,6 +115,10 @@ const config: Config = {
             {
               label: 'アルゴリズム',
               to: '/docs/algorithms/',
+            },
+            {
+              label: '情報オリンピック挑戦ガイド',
+              to: '/docs/contest/joi-guide',
             },
             {
               label: 'AOJロードマップ',
@@ -175,6 +179,19 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.oneDark,
+    },
+    mermaid: {
+      theme: {light: 'neutral', dark: 'dark'},
+      options: {
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true,
+          wrappingWidth: 180,
+        },
+        themeVariables: {
+          fontSize: '14px',
+        },
+      },
     },
   } satisfies Preset.ThemeConfig,
 };

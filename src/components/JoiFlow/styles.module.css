@@ -1,0 +1,88 @@
+.joiFlow {
+  margin: 1.25rem 0 1.5rem;
+  padding: 0.25rem 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.joiFlowList {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0.25rem 0.15rem 0.5rem;
+  list-style: none;
+  min-width: min-content;
+}
+
+.joiFlowItem {
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-width: 5.75rem;
+  padding: 0.75rem 0.55rem;
+  border: 1px solid rgba(109, 180, 255, 0.28);
+  border-radius: 0.85rem;
+  background:
+    linear-gradient(160deg, rgba(37, 115, 255, 0.14), transparent 70%),
+    var(--ifm-background-color);
+  text-align: center;
+}
+
+.joiFlowPeriod {
+  color: var(--ifm-color-primary);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.joiFlowLabel {
+  color: var(--ifm-font-color-base);
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.joiFlowArrow {
+  position: absolute;
+  top: 50%;
+  right: -0.62rem;
+  z-index: 1;
+  color: var(--ifm-color-primary);
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 997px) {
+  .joiFlowList {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.65rem 1.35rem;
+    min-width: 0;
+    padding-bottom: 0.25rem;
+  }
+
+  .joiFlowItem {
+    min-width: 6.5rem;
+    padding: 0.85rem 0.75rem;
+  }
+
+  .joiFlowArrow {
+    right: -0.95rem;
+  }
+}
+
+@media (max-width: 996px) {
+  .joiFlowItem:last-child .joiFlowArrow {
+    display: none;
+  }
+}
