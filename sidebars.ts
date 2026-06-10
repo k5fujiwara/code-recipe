@@ -131,6 +131,17 @@ const sidebars: SidebarsConfig = {
       ],
     },
   ],
+  appsSidebar: [
+    {
+      type: 'category',
+      label: '運営者のアプリ',
+      link: {
+        type: 'doc',
+        id: 'apps/index',
+      },
+      items: ['apps/it1-code-pocket'],
+    },
+  ],
   contestSidebar: [
     {
       type: 'category',

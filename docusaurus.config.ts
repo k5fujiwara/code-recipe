@@ -96,6 +96,12 @@ const config: Config = {
           label: '競技・対策',
         },
         {
+          type: 'docSidebar',
+          sidebarId: 'appsSidebar',
+          position: 'left',
+          label: '運営者のアプリ',
+        },
+        {
           href: `https://github.com/${githubUserName}/${repositoryName}`,
           label: 'GitHub',
           position: 'right',
@@ -123,6 +129,10 @@ const config: Config = {
             {
               label: 'AOJロードマップ',
               to: '/docs/contest/aoj-roadmap',
+            },
+            {
+              label: 'IT1-CODE-POCKET',
+              to: '/docs/apps/it1-code-pocket',
             },
           ],
         },

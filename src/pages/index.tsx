@@ -31,6 +31,12 @@ const recipeCards = [
     description: 'JOIの公式フローと、AOJ・AtCoderでの練習の進め方をまとめて確認しよう。',
     to: '/docs/contest/joi-guide',
   },
+  {
+    title: 'IT1-CODE-POCKET',
+    badge: 'Apps',
+    description: '共通テスト「情報Ⅰ」第3問対策の学習クイズ Web アプリを試そう。',
+    to: '/docs/apps/it1-code-pocket',
+  },
 ];
 
 function HomepageHeader() {
