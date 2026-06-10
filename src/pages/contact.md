@@ -11,7 +11,7 @@ Code Recipe へのお問い合わせ、内容の修正依頼、掲載内容に�
 
 現在のお問い合わせ窓口は、GitHub Issues です。
 
-- [GitHub Issuesで問い合わせる](https://github.com/keigo-fujiwara/code-recipe/issues)
+- [GitHub Issuesで問い合わせる](https://github.com/k5fujiwara/code-recipe/issues)
 
 教材内容の誤り、リンク切れ、表現の改善案などがあれば、Issue としてご連絡ください。
 

@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 // GitHub Actions では環境変数から自動取得します。
 // ローカル確認時に固定したい場合は、このフォールバック値を変更してください。
-const githubUserName = process.env.GITHUB_REPOSITORY_OWNER ?? 'YOUR_GITHUB_USERNAME';
+const githubUserName = process.env.GITHUB_REPOSITORY_OWNER ?? 'k5fujiwara';
 const repositoryName = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? 'code-recipe';
 
 const config: Config = {
