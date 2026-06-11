@@ -9,6 +9,12 @@ description: Code Recipe の運営者情報
 
 Code Recipe
 
+## サイト URL
+
+https://code-recipes.com/
+
+サイト名は **Code Recipe**（単数）ですが、URL は **code-recipes.com**（複数形）を使用しています。
+
 ## サイト概要
 
 Code Recipe は、プログラミング初学者や塾生向けに、開発フロー、GitHubの使い方、アルゴリズム、AOJ問題への挑戦方法をまとめる学習サイトです。
