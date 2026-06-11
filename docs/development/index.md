@@ -23,4 +23,5 @@ description: Code Recipe の開発系レシピ一覧
 - [プロジェクト立ち上げとトークン発行](./project-setup-and-token)
 - [学習クイズテンプレート QuizCode](./quiz-code-template)
 - [SNSやAPI連携の準備](./accounts-and-api)
+- [独自ドメイン設定（Cloudflare）](./custom-domain-cloudflare)
 - [Google AdSense の設定と収益化](./google-adsense-setup)

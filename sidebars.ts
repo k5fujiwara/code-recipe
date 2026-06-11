@@ -26,6 +26,7 @@ const sidebars: SidebarsConfig = {
         'development/project-setup-and-token',
         'development/quiz-code-template',
         'development/accounts-and-api',
+        'development/custom-domain-cloudflare',
         'development/google-adsense-setup',
       ],
     },

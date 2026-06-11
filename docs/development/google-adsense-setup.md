@@ -162,7 +162,7 @@ GitHub Pages プロジェクトサイトの例:
 User-agent: *
 Allow: /
 
-Sitemap: https://k5fujiwara.github.io/code-recipe/sitemap.xml
+Sitemap: https://code-recipe.com/sitemap.xml
 ```
 
 独自ドメインに切り替えたら、`Sitemap:` の URL も **新しいドメインに更新** してください。
@@ -304,7 +304,7 @@ const config: Config = {
 
 ```text
 確認用 URL の例（GitHub Pages プロジェクトサイト）:
-https://k5fujiwara.github.io/code-recipe/
+https://code-recipe.com/
 
 ページソースに次のような行があれば OK:
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-あなたのID" crossorigin="anonymous"></script>
@@ -397,7 +397,7 @@ Code Recipe は GitHub Pages の **プロジェクトサイト** なので、`ba
 
 ```text
 GitHub Pages（プロジェクトサイト）:
-https://k5fujiwara.github.io/code-recipe/ads.txt
+https://code-recipe.com/ads.txt
 
 独自ドメインをルートに設定した場合:
 https://あなたのドメイン/ads.txt

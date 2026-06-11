@@ -9,17 +9,18 @@ import type * as Preset from '@docusaurus/preset-classic';
 const githubUserName = process.env.GITHUB_REPOSITORY_OWNER ?? 'k5fujiwara';
 const repositoryName = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? 'code-recipe';
 
+// 独自ドメイン（Cloudflare Registrar で取得）
+const customDomain = 'code-recipe.com';
+const siteUrl = process.env.SITE_URL ?? `https://${customDomain}`;
+const baseUrl = process.env.BASE_URL ?? '/';
+
 const config: Config = {
   title: 'Code Recipe',
   tagline: 'マネして、学んで、作り出す。君だけの開発レシピ集。',
   favicon: 'img/favicon.svg',
 
-  // Set the production url of your site here.
-  // Example: https://your-github-user.github.io
-  url: `https://${githubUserName}.github.io`,
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: `/${repositoryName}/`,
+  url: siteUrl,
+  baseUrl,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
