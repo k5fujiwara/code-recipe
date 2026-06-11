@@ -178,6 +178,10 @@ const config: Config = {
               to: '/privacy-policy',
             },
             {
+              label: '利用規約・免責事項',
+              to: '/terms',
+            },
+            {
               label: 'お問い合わせ',
               to: '/contact',
             },
