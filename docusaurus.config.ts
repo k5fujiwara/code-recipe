@@ -9,10 +9,16 @@ import type * as Preset from '@docusaurus/preset-classic';
 const githubUserName = process.env.GITHUB_REPOSITORY_OWNER ?? 'k5fujiwara';
 const repositoryName = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? 'code-recipe';
 
-// 独自ドメイン（Cloudflare Registrar で取得）
-const customDomain = 'code-recipe.com';
-const siteUrl = process.env.SITE_URL ?? `https://${customDomain}`;
-const baseUrl = process.env.BASE_URL ?? '/';
+// 独自ドメインを使う場合はここに設定（未購入の間は空のまま）
+// 例: 'coderecipe.jp' → url が https://coderecipe.jp、baseUrl が /
+const customDomain = process.env.CUSTOM_DOMAIN ?? '';
+const siteUrl =
+  process.env.SITE_URL ??
+  (customDomain
+    ? `https://${customDomain}`
+    : `https://${githubUserName}.github.io`);
+const baseUrl =
+  process.env.BASE_URL ?? (customDomain ? '/' : `/${repositoryName}/`);
 
 const config: Config = {
   title: 'Code Recipe',

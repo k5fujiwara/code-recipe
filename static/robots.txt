@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://code-recipe.com/sitemap.xml
+Sitemap: https://k5fujiwara.github.io/code-recipe/sitemap.xml

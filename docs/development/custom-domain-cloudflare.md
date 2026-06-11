@@ -1,39 +1,95 @@
 ---
 sidebar_position: 6
 title: 独自ドメイン設定（Cloudflare + GitHub Pages）
-description: code-recipe.com を Cloudflare Registrar で取得し GitHub Pages に紐付ける手順
+description: Cloudflare Registrar でドメインを取得し GitHub Pages に紐付ける手順
 ---
 
 # 独自ドメイン設定（Cloudflare + GitHub Pages）
 
-Code Recipe は **code-recipe.com**（Cloudflare Registrar）を独自ドメインとして使います。
+Code Recipe を独自ドメインで公開する手順です。Cloudflare Registrar でドメインを取得したあと、DNS と GitHub Pages を設定します。
+
+:::info code-recipe.com について
+`code-recipe.com` は取得できない（既に登録済み）ため、別名のドメインを選びます。候補は下の「ドメイン名の候補」を参照してください。
+:::
+
+## ドメイン名の候補
+
+サイト名 **Code Recipe** に近く、IT1-CODE-POCKET（`it1-code-pocket.com`）と混同しにくい例です。Cloudflare Registrar で空き状況を確認して選びます。
+
+### おすすめ（ブランドに近い）
+
+| 候補 | メリット |
+| :--- | :--- |
+| **coderecipe.jp** | ハイフンなし・日本向け・覚えやすい |
+| **coderecipe.dev** | 開発・学習サイトらしい `.dev` |
+| **code-recipe.jp** | サイト名と表記が一致 |
+| **code-recipe.dev** | 上と同様で `.dev` |
+
+### 次点（`.com` で探す場合）
+
+| 候補 | メリット |
+| :--- | :--- |
+| **coderecipe.net** | `code-recipe.com` に近い |
+| **devcoderecipe.com** | 取得しやすい派生名 |
+| **learn-coderecipe.com** | 学習サイトだと分かる |
+| **my-code-recipe.com** | 個人・学習プロジェクト向け |
+
+### 選ぶときのコツ
+
+- **短くて読める**（口頭で伝えやすい）
+- **ハイフンの有無**は URL 共有時に迷いが出るので、サイト名と揃える
+- AdSense・Search Console は **1 サイト 1 URL** で登録するので、決めたら変えない
+- 購入後、`docusaurus.config.ts` の `customDomain` にその名前を入れる
 
 ## 全体の流れ
 
-1. Cloudflare で DNS を設定する
-2. リポジトリの `url` / `baseUrl` / `CNAME` を独自ドメイン用に変更して push する
-3. GitHub リポジトリの **Settings → Pages** で Custom domain を設定する
-4. **Enforce HTTPS** を有効にする
-5. 表示と `robots.txt` / `sitemap.xml` を確認する
+1. Cloudflare Registrar でドメインを購入する
+2. `docusaurus.config.ts` の `customDomain` を更新し、`static/CNAME` と `robots.txt` を用意して push する
+3. Cloudflare で DNS を設定する
+4. GitHub **Settings → Pages** で Custom domain を設定する
+5. **Enforce HTTPS** を有効にする
+6. 表示と `robots.txt` / `sitemap.xml` を確認する
 
-## 1. Cloudflare の DNS 設定
+## 1. リポジトリ側の設定
 
-Cloudflare ダッシュボード → **code-recipe.com** → **DNS** → **レコードを追加**。
+ドメインを決めたら（例: `coderecipe.jp`）、次を更新します。
 
-### ルートドメイン（code-recipe.com）をメインにする場合
+### docusaurus.config.ts
 
-GitHub Pages 向けに **A レコード** を 4 つ追加します。
+```ts
+const customDomain = process.env.CUSTOM_DOMAIN ?? 'coderecipe.jp';
+```
+
+`customDomain` に値があると、自動的に `url` が `https://（ドメイン）`、`baseUrl` が `/` になります。
+
+### static/CNAME（新規作成）
+
+```text
+coderecipe.jp
+```
+
+Custom domain と **同じ 1 行** を書きます。
+
+### static/robots.txt
+
+```text
+Sitemap: https://coderecipe.jp/sitemap.xml
+```
+
+変更後は `git push` してデプロイ完了を待ちます。
+
+## 2. Cloudflare の DNS 設定
+
+Cloudflare ダッシュボード → **購入したドメイン** → **DNS**。
+
+### ルートドメイン（example.jp）をメインにする場合
 
 | タイプ | 名前 | コンテンツ | プロキシ |
 | :--- | :--- | :--- | :--- |
-| A | `@` | `185.199.108.153` | プロキシしない（DNS only）推奨 |
-| A | `@` | `185.199.109.153` | プロキシしない |
-| A | `@` | `185.199.110.153` | プロキシしない |
-| A | `@` | `185.199.111.153` | プロキシしない |
-
-:::tip プロキシ（オレンジ雲）について
-初回の HTTPS 設定が不安定になることがあるため、**DNS only（灰色の雲）** で始める人が多いです。安定したら Cloudflare プロキシを検討してください。
-:::
+| A | `@` | `185.199.108.153` | DNS only 推奨 |
+| A | `@` | `185.199.109.153` | DNS only |
+| A | `@` | `185.199.110.153` | DNS only |
+| A | `@` | `185.199.111.153` | DNS only |
 
 ### www も使う場合（任意）
 
@@ -41,51 +97,38 @@ GitHub Pages 向けに **A レコード** を 4 つ追加します。
 | :--- | :--- | :--- | :--- |
 | CNAME | `www` | `k5fujiwara.github.io` | DNS only 推奨 |
 
-`www.code-recipe.com` を `code-recipe.com` にそろえたい場合は、Cloudflare の **リダイレクトルール** で `www` → ルートへ転送します。
+`www` をルートにそろえる場合は、Cloudflare の **リダイレクトルール** を使います。
 
-## 2. リポジトリ側の設定（済みの内容）
-
-独自ドメイン用に、次が設定されています。
-
-| ファイル | 内容 |
-| :--- | :--- |
-| `docusaurus.config.ts` | `url: https://code-recipe.com`、`baseUrl: /` |
-| `static/CNAME` | `code-recipe.com` |
-| `static/robots.txt` | `Sitemap: https://code-recipe.com/sitemap.xml` |
-
-変更後は `git push` して GitHub Actions のデプロイが完了するまで待ちます。
+:::tip プロキシ（オレンジ雲）
+初回の HTTPS 設定は **DNS only（灰色の雲）** で始めると安定しやすいです。
+:::
 
 ## 3. GitHub Pages で Custom domain
 
-1. リポジトリ [k5fujiwara/code-recipe](https://github.com/k5fujiwara/code-recipe) を開く
-2. **Settings → Pages**
-3. **Custom domain** に `code-recipe.com` を入力して保存
-4. DNS が反映されると **Enforce HTTPS** をオンにする
+1. リポジトリ [k5fujiwara/code-recipe](https://github.com/k5fujiwara/code-recipe) → **Settings → Pages**
+2. **Custom domain** に購入したドメインを入力（例: `coderecipe.jp`）
+3. DNS 反映後、**Enforce HTTPS** をオン
 
 ## 4. 動作確認
 
-- [ ] https://code-recipe.com/ が開く
-- [ ] https://code-recipe.com/contact が開く
-- [ ] https://code-recipe.com/robots.txt が開く
-- [ ] https://code-recipe.com/sitemap.xml が開く
-- [ ] ページソースのリンクが `https://code-recipe.com/...` になっている（`/code-recipe/` が残っていない）
+- [ ] `https://（あなたのドメイン）/` が開く
+- [ ] お問い合わせ・Legal ページが開く
+- [ ] `robots.txt` / `sitemap.xml` が開く
+- [ ] ページソースの URL に `/code-recipe/` が残っていない
 
 ## 5. Search Console・AdSense
 
-独自ドメイン反映後は、登録 URL を **https://code-recipe.com/** にそろえます。
+独自ドメイン反映後、登録 URL を **新ドメインにそろえます**。
 
-- Search Console: **ドメイン プロパティ** `code-recipe.com` または URL プレフィックス
-- AdSense: サイト URL を `https://code-recipe.com/`
-- Google フォームのプライバシーポリシーリンク: `https://code-recipe.com/privacy-policy`
+- Search Console: ドメイン プロパティまたは URL プレフィックス
+- AdSense: `https://（あなたのドメイン）/`
+- Google フォームのプライバシーリンク: `https://（あなたのドメイン）/privacy-policy`
 
 詳細は [Google AdSense の設定と収益化](./google-adsense-setup) を参照してください。
 
-## ローカル開発の注意
+## ローカル開発
 
-`baseUrl` が `/` になったため、ローカルは次の URL で開きます。
-
-```text
-http://localhost:3000/
-```
-
-以前の `http://localhost:3000/code-recipe/` ではありません。
+| 状態 | ローカル URL |
+| :--- | :--- |
+| 独自ドメイン未設定 | `http://localhost:3000/code-recipe/` |
+| 独自ドメイン設定後 | `http://localhost:3000/` |
