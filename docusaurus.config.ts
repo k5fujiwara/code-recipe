@@ -147,6 +147,10 @@ const config: Config = {
               label: 'SNSやAPI連携',
               to: '/docs/development/accounts-and-api',
             },
+            {
+              label: 'Google AdSense',
+              to: '/docs/development/google-adsense-setup',
+            },
           ],
         },
         {
