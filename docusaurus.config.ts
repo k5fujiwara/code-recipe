@@ -27,6 +27,46 @@ const config: Config = {
   url: siteUrl,
   baseUrl,
 
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'icon',
+        type: 'image/svg+xml',
+        href: '/img/favicon.svg',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/img/apple-touch-icon.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'manifest',
+        href: '/site.webmanifest',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'theme-color',
+        content: '#0B1220',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'twitter:card',
+        content: 'summary_large_image',
+      },
+    },
+  ],
+
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: githubUserName,
@@ -64,8 +104,12 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card when you prepare an OGP image.
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/ogp.png',
+    metadata: [
+      {property: 'og:type', content: 'website'},
+      {property: 'og:locale', content: 'ja_JP'},
+      {property: 'og:site_name', content: 'Code Recipe'},
+    ],
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: false,

@@ -1,0 +1,21 @@
+{
+  "name": "Code Recipe",
+  "short_name": "Code Recipe",
+  "description": "マネして、学んで、作り出す。君だけの開発レシピ集。",
+  "icons": [
+    {
+      "src": "/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0B1220",
+  "background_color": "#0B1220",
+  "display": "standalone",
+  "lang": "ja"
+}
