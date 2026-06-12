@@ -19,6 +19,10 @@ const siteUrl =
 const baseUrl =
   process.env.BASE_URL ?? (customDomain ? '/' : `/${repositoryName}/`);
 
+// note 等の OGP キャッシュ対策（クエリで再取得を促す）
+const ogImageVersion = '20260613';
+const ogImageUrl = `${siteUrl}/img/ogp.jpg?v=${ogImageVersion}`;
+
 const config: Config = {
   title: 'Code Recipe',
   tagline: 'マネして、学んで、作り出す。君だけの開発レシピ集。',
@@ -65,6 +69,13 @@ const config: Config = {
         content: 'summary_large_image',
       },
     },
+    {
+      tagName: 'meta',
+      attributes: {
+        property: 'og:image:secure_url',
+        content: ogImageUrl,
+      },
+    },
   ],
 
   // GitHub pages deployment config.
@@ -104,8 +115,8 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // note 等の OGP 用（JPEG・軽量）。Docusaurus 同梱の docusaurus-social-card.jpg は使わない。
-    image: 'img/og-social.jpg',
+    // OGP（絶対 URL + バージョンクエリ）。同梱の docusaurus-social-card.jpg は使わない。
+    image: ogImageUrl,
     metadata: [
       {property: 'og:type', content: 'website'},
       {property: 'og:locale', content: 'ja_JP'},
