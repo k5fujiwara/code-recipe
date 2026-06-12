@@ -104,11 +104,15 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/ogp.png',
+    // note 等の OGP 用（JPEG・軽量）。Docusaurus 同梱の docusaurus-social-card.jpg は使わない。
+    image: 'img/og-social.jpg',
     metadata: [
       {property: 'og:type', content: 'website'},
       {property: 'og:locale', content: 'ja_JP'},
       {property: 'og:site_name', content: 'Code Recipe'},
+      {property: 'og:image:width', content: '1200'},
+      {property: 'og:image:height', content: '630'},
+      {property: 'og:image:type', content: 'image/jpeg'},
     ],
     colorMode: {
       defaultMode: 'dark',

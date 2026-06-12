@@ -6,7 +6,7 @@
     "docusaurus": "docusaurus",
     "start": "npm run build && docusaurus serve --host localhost --port 3000",
     "dev": "docusaurus start",
-    "build": "docusaurus build",
+    "build": "docusaurus build && node scripts/clean-default-assets.mjs",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
