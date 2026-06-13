@@ -67,7 +67,25 @@ GitHub Pages 向けに **A レコード** を 4 つ追加します。
 - [ ] https://code-recipes.com/sitemap.xml が開く
 - [ ] ページソースのリンクが `https://code-recipes.com/...` になっている
 
-## 5. Search Console・AdSense・フォーム
+## 5. Search Console の URL 検査で「リダイレクト エラー」
+
+GitHub Pages は、末尾スラッシュのない URL を **スラッシュ付き** に 301 リダイレクトします。
+
+```text
+https://code-recipes.com/docs/development/github-signup
+  → 301
+https://code-recipes.com/docs/development/github-signup/
+```
+
+Search Console でスラッシュなしの URL を検査すると **リダイレクト エラー** と出ることがあります。
+
+**対処:** URL 検査・インデックス登録では **末尾に `/` を付けた URL** を使います。
+
+```text
+https://code-recipes.com/docs/development/github-signup/
+```
+
+## 6. Search Console・AdSense・フォーム
 
 登録 URL を **https://code-recipes.com/** にそろえます。
 
