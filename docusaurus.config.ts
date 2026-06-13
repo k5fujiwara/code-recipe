@@ -31,6 +31,9 @@ const config: Config = {
   url: siteUrl,
   baseUrl,
 
+  // GitHub Pages のリダイレクトと canonical を揃える（Search Console のリダイレクトエラー防止）
+  trailingSlash: true,
+
   headTags: [
     {
       tagName: 'link',
@@ -189,15 +192,15 @@ const config: Config = {
             },
             {
               label: '情報オリンピック挑戦ガイド',
-              to: '/docs/contest/joi-guide',
+              to: '/docs/contest/joi-guide/',
             },
             {
               label: 'AOJロードマップ',
-              to: '/docs/contest/aoj-roadmap',
+              to: '/docs/contest/aoj-roadmap/',
             },
             {
               label: 'IT1-CODE-POCKET',
-              to: '/docs/apps/it1-code-pocket',
+              to: '/docs/apps/it1-code-pocket/',
             },
           ],
         },
@@ -206,15 +209,15 @@ const config: Config = {
           items: [
             {
               label: 'GitHubの登録方法',
-              to: '/docs/development/github-signup',
+              to: '/docs/development/github-signup/',
             },
             {
               label: 'SNSやAPI連携',
-              to: '/docs/development/accounts-and-api',
+              to: '/docs/development/accounts-and-api/',
             },
             {
               label: 'Google AdSense',
-              to: '/docs/development/google-adsense-setup',
+              to: '/docs/development/google-adsense-setup/',
             },
           ],
         },

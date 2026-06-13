@@ -639,4 +639,4 @@ Docusaurus でこれを使うには、React コンポーネントに包むか、
 - [Google Search Console](https://search.google.com/search-console/)
 - [Google の広告ポリシーと規約](https://policies.google.com/technologies/ads?hl=ja)
 - [Code Recipe プライバシーポリシー](/privacy-policy)
-- [プロジェクト立ち上げとトークン発行](./project-setup-and-token) — GitHub 公開の基本
+- [プロジェクト立ち上げとトークン発行](/docs/development/project-setup-and-token/) — GitHub 公開の基本

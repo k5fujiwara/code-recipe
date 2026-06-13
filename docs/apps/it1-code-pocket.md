@@ -51,8 +51,8 @@ import TOCCollapsible from '@theme/TOCCollapsible';
 
 IT1-CODE-POCKET で扱うアルゴリズムの考え方は、Code Recipe の解説ページでも学べます。クイズで「引っかかったテーマ」を、次のページで深く理解する使い方がおすすめです。
 
-- [アルゴリズム一覧](../algorithms/)
-- [AOJ攻略ロードマップ](../contest/aoj-roadmap) — さらに実装力を伸ばしたいとき
+- [アルゴリズム一覧](/docs/algorithms/)
+- [AOJ攻略ロードマップ](/docs/contest/aoj-roadmap/) — さらに実装力を伸ばしたいとき
 
 ## モバイルアプリ版について
 

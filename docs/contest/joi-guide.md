@@ -10,7 +10,7 @@ import JoiFlow from '@site/src/components/JoiFlow';
 
 **日本情報オリンピック（JOI）** は、プログラミングの実力を競う国内大会です。エントリーから本選、世界大会（IOI）まで、毎年決まった流れで進みます。
 
-このページでは、「いつ」「どこで」「何が行われるのか」を整理します。全体像をつかんだら、練習は [AOJ攻略ロードマップ](./aoj-roadmap) とあわせて進めましょう。
+このページでは、「いつ」「どこで」「何が行われるのか」を整理します。全体像をつかんだら、練習は [AOJ攻略ロードマップ](/docs/contest/aoj-roadmap/) とあわせて進めましょう。
 
 ## エントリーから世界大会までの全体フロー
 
@@ -72,8 +72,8 @@ import JoiFlow from '@site/src/components/JoiFlow';
 
 - **役割:** アルゴリズムの「教科書」に近い練習場
 - **特徴:** JOIの過去問が「JOI選考」カテゴリで掲載。先輩と同じ問題を同じジャッジで解ける
-- **Code Recipe:** [AOJ攻略ロードマップ](./aoj-roadmap) でアルゴリズム別に問題を選べる
-- **リンク:** [AIZU ONLINE JUDGE](https://judge.u-aizu.ac.jp/onlinejudge/index.jsp) / [AOJ攻略ロードマップ](./aoj-roadmap)
+- **Code Recipe:** [AOJ攻略ロードマップ](/docs/contest/aoj-roadmap/) でアルゴリズム別に問題を選べる
+- **リンク:** [AIZU ONLINE JUDGE](https://judge.u-aizu.ac.jp/onlinejudge/index.jsp) / [AOJ攻略ロードマップ](/docs/contest/aoj-roadmap/)
 
 ### AtCoder（アットコーダー）
 
@@ -96,7 +96,7 @@ import JoiFlow from '@site/src/components/JoiFlow';
 
 ## 次にやること
 
-- **9月前:** [アルゴリズム一覧](../algorithms/) と [AOJ攻略ロードマップ](./aoj-roadmap) で土台を固める
+- **9月前:** [アルゴリズム一覧](/docs/algorithms/) と [AOJ攻略ロードマップ](/docs/contest/aoj-roadmap/) で土台を固める
 - **9月:** 公式サイトでエントリー期間を確認して申し込む
 - **1次予選前:** 繰り返し・条件分岐・配列操作をPythonで書けるようにする
 - **2次予選以降:** 動的計画法・グラフ・データ構造など典型解法を段階的に追加する

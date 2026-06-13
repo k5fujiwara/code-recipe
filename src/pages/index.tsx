@@ -23,19 +23,19 @@ const recipeCards = [
     title: '登録・連携を準備する',
     badge: 'Setup',
     description: 'GitHubの登録方法や、SNS・API連携に必要な準備をまとめて確認しよう。',
-    to: '/docs/development/github-signup',
+    to: '/docs/development/github-signup/',
   },
   {
     title: '情報オリンピックに挑戦',
     badge: 'Contest',
     description: 'JOIの公式フローと、AOJ・AtCoderでの練習の進め方をまとめて確認しよう。',
-    to: '/docs/contest/joi-guide',
+    to: '/docs/contest/joi-guide/',
   },
   {
     title: 'IT1-CODE-POCKET',
     badge: 'Apps',
     description: '共通テスト「情報Ⅰ」第3問対策の学習クイズ Web アプリを試そう。',
-    to: '/docs/apps/it1-code-pocket',
+    to: '/docs/apps/it1-code-pocket/',
   },
 ];
 

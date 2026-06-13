@@ -19,9 +19,9 @@ description: Code Recipe の開発系レシピ一覧
 
 ## おすすめ
 
-- [GitHubの登録方法](./github-signup)
-- [プロジェクト立ち上げとトークン発行](./project-setup-and-token)
-- [学習クイズテンプレート QuizCode](./quiz-code-template)
-- [SNSやAPI連携の準備](./accounts-and-api)
-- [独自ドメイン設定（Cloudflare）](./custom-domain-cloudflare)
-- [Google AdSense の設定と収益化](./google-adsense-setup)
+- [GitHubの登録方法](/docs/development/github-signup/)
+- [プロジェクト立ち上げとトークン発行](/docs/development/project-setup-and-token/)
+- [学習クイズテンプレート QuizCode](/docs/development/quiz-code-template/)
+- [SNSやAPI連携の準備](/docs/development/accounts-and-api/)
+- [独自ドメイン設定（Cloudflare）](/docs/development/custom-domain-cloudflare/)
+- [Google AdSense の設定と収益化](/docs/development/google-adsense-setup/)

@@ -95,7 +95,7 @@ https://code-recipes.com/docs/development/github-signup/
 | AdSense | `https://code-recipes.com/` |
 | Google フォームのプライバシーリンク | `https://code-recipes.com/privacy-policy` |
 
-詳細は [Google AdSense の設定と収益化](./google-adsense-setup) を参照してください。
+詳細は [Google AdSense の設定と収益化](/docs/development/google-adsense-setup/) を参照してください。
 
 ## ローカル開発
 

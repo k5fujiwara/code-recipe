@@ -10,7 +10,7 @@ Code Recipe の運営者が開発し、公開している Web アプリを紹介
 
 ## 公開中
 
-- **[IT1-CODE-POCKET](./it1-code-pocket)** — 共通テスト「情報Ⅰ」第3問（アルゴリズム）対策クイズ
+- **[IT1-CODE-POCKET](/docs/apps/it1-code-pocket/)** — 共通テスト「情報Ⅰ」第3問（アルゴリズム）対策クイズ
 
 ## 今後の展開
 
