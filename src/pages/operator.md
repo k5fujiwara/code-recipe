@@ -7,15 +7,15 @@ description: Code Recipe 運営者・藤原圭吾の経歴、指導実績、開�
 
 <div class="operator-profile">
 
-<img src="/img/fujiwara.jpg" alt="藤原 圭吾" width="180" height="180" />
+<img class="operator-profile__photo" src="/img/fujiwara.jpg" alt="藤原 圭吾" width="180" height="180" />
 
 <div class="operator-profile__body">
 
 ## 藤原 圭吾（ふじわら けいご）
 
-Code Recipe 運営者。個別・集団・プログラミング塾で長年指導しながら、学習支援の Web アプリや教材サイトを開発しています。
+個別・集団・プログラミング塾で長年指導しながら、学習支援の Web アプリや教材サイトを開発しています。
 
-[お問い合わせ](/contact/) · [GitHub](https://github.com/k5fujiwara)
+[お問い合わせ](/contact/) · [GitHub](https://github.com/k5fujiwara) · [このサイトについて](/about/)
 
 </div>
 
@@ -28,6 +28,11 @@ Code Recipe 運営者。個別・集団・プログラミング塾で長年指�
 | 個別指導塾 | 講師 4年 · 主任 1年 |
 | 集団指導塾 | 講師 4年 · 校舎責任者 2年 |
 | プログラミング塾 | 教室責任者 3年 |
+
+## プログラミング実績
+
+- **[AIZU ONLINE JUDGE](https://judge.u-aizu.ac.jp/onlinejudge/index.jsp)** — 2年間で **429問** のプログラミング問題をクリア（2024/03/28 ～ 2026/03/04）
+- Code Recipe の [AOJ攻略ロードマップ](/docs/contest/aoj-roadmap/) は、この実践をもとにアルゴリズム別に問題を整理したページです。
 
 ## 指導可能科目
 
@@ -61,11 +66,12 @@ Code Recipe 運営者。個別・集団・プログラミング塾で長年指�
 
 ## 開発物一覧
 
-### Code Recipe（本サイト）
+### Code Recipe
 
 - URL: [https://code-recipes.com/](https://code-recipes.com/)
 - 概要: 「マネして、学んで、作り出す。君だけの開発レシピ集。」
 - 開発フロー、アルゴリズム、AOJ・JOI 対策などをまとめた学習サイト（Docusaurus + GitHub Pages）
+- サイト内: [このサイトについて](/about/)
 
 ### IT1-CODE-POCKET
 
@@ -100,41 +106,3 @@ Code Recipe 運営者。個別・集団・プログラミング塾で長年指�
 | Shorts-Auto-Creator | 指定 RSS の記事から YouTube Shorts 向け動画を自動生成・自動投稿 |
 | ロト6予測ツール | 過去のロト6抽選データを機械学習で分析し、次回当選番号を予測する Web アプリ |
 | タスク自動管理 | スプレッドシートでタスクを登録し、GAS で自動取得して指定時刻にメール送信 |
-
-## 本サイトについて
-
-### サイト名
-
-Code Recipe
-
-### サイト URL
-
-[https://code-recipes.com/](https://code-recipes.com/)
-
-サイト名は **Code Recipe**（単数）ですが、URL は **code-recipes.com**（複数形）を使用しています。
-
-### サイト概要
-
-Code Recipe は、プログラミング初学者や塾生向けに、開発フロー、GitHub の使い方、アルゴリズム、AOJ 問題への挑戦方法をまとめる学習サイトです。
-
-図解と Python コードを使って、学習しやすい教材を提供します。
-
-### 運営目的
-
-当サイトは、プログラミング学習者が以下を身につけることを目的としています。
-
-- GitHub を使った開発の基本
-- アルゴリズムの考え方
-- Python での実装練習
-- AOJ などのオンラインジャッジへの挑戦
-- 安全な API キーやトークンの扱い
-
-学習者向け Web アプリの一覧は [運営者のアプリ](/docs/apps/) を参照してください。
-
-## お問い合わせ
-
-サイト内容に関するご連絡は、[お問い合わせ](/contact/) ページからお願いいたします。
-
-## 免責
-
-当サイトの掲載内容は、学習支援を目的としたものです。内容の正確性には注意していますが、利用環境やサービス仕様の変更により、実際の画面や手順と異なる場合があります。

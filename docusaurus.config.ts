@@ -254,8 +254,12 @@ const config: Config = {
               to: '/contact',
             },
             {
+              label: 'このサイトについて',
+              to: '/about/',
+            },
+            {
               label: '運営者情報',
-              to: '/operator',
+              to: '/operator/',
             },
           ],
         },

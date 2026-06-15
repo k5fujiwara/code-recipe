@@ -359,10 +359,12 @@ a `::before` layer avoids that trap.
   background: var(--ifm-background-surface-color);
 }
 
-.operator-profile img {
+.operator-profile img,
+.operator-profile__photo {
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
+  object-position: 10% center;
 }
 
 .operator-profile__body {
