@@ -348,3 +348,43 @@ a `::before` layer avoids that trap.
   display: none;
 }
 
+.operator-profile {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin: 1.5rem 0 2rem;
+  padding: 1.25rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  background: var(--ifm-background-surface-color);
+}
+
+.operator-profile img {
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.operator-profile__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.operator-profile__body h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.35rem;
+}
+
+.operator-profile__body p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 576px) {
+  .operator-profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
