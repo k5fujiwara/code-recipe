@@ -90,7 +90,6 @@ import JoiFlow from '@site/src/components/JoiFlow';
 ## ブックマークしておきたい公式リンク
 
 - [情報オリンピック日本委員会](https://www.ioi-jp.org/) — エントリー・日程・公式発表
-- [JOI 過去問題・資料](https://www.ioi-jp.org/joi/) — 年度ごとの過去問・解説PDF
 - [AIZU ONLINE JUDGE](https://judge.u-aizu.ac.jp/onlinejudge/index.jsp) — オンラインジャッジ
 - [AtCoder](https://atcoder.jp/) — コンテスト形式の練習
 
