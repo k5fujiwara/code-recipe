@@ -1,0 +1,215 @@
+﻿/**
+ * ============================================================
+ *  Task AutoMailer — テンプレート
+ *  Google スプレッドシートのタスクを指定曜日に自動メール送信
+ *  完了チェックで別シートへ自動移動
+ * ============================================================
+ *
+ * 【スプレッドシートの列構成】
+ *   A列：タスク名
+ *   B列：期限（日付形式）
+ *   C列：重要度（高 / 中 / 低）
+ *   D列：完了（チェックボックス）
+ *
+ * 【セットアップ手順】
+ *   1. 下記「設定エリア」を自分の環境に合わせて編集する
+ *   2. Apps Script の「サービス」から Tasks API は不要
+ *   3. 左メニューの時計マーク →「トリガーを追加」
+ *      関数：sendTaskEmail / 時間主導型 / 日付ベース
+ *      時刻：SEND_HOUR で設定した時間帯を選択
+ *            例）SEND_HOUR = 11 → トリガーは「午前11〜12時」を選択
+ *   4. 初回実行時に権限を許可する
+ * ============================================================
+ */
+
+
+// ============================================================
+//  ★ 設定エリア（ここだけ編集してください）
+// ============================================================
+
+/** スプレッドシートのID（URLの /d/【ここ】/edit） */
+const SPREADSHEET_ID = "スプレッドシートのIDを入力";
+
+/** タスクを管理しているシート名 */
+const SHEET_NAME = "タスク一覧";
+
+/** 完了タスクの移動先シート名（存在しない場合は自動作成） */
+const DONE_SHEET_NAME = "完了済み";
+
+/** 送信先メールアドレス */
+const SEND_TO = "送信先のメールアドレスを入力";
+
+/**
+ * メールを送信する時間帯（0〜23 で指定）
+ * ※ GASのトリガー設定と必ず合わせてください
+ *
+ * 例）
+ *   SEND_HOUR = 8  → 午前8時台に送信  → トリガーは「午前8〜9時」
+ *   SEND_HOUR = 11 → 午前11時台に送信 → トリガーは「午前11〜12時」
+ *   SEND_HOUR = 17 → 午後5時台に送信  → トリガーは「午後5〜6時」
+ */
+const SEND_HOUR = 11;
+
+/**
+ * メールを送信する曜日（送りたい曜日の行頭の // を削除してください）
+ *
+ * 0 = 日曜日
+ * 1 = 月曜日
+ * 2 = 火曜日
+ * 3 = 水曜日
+ * 4 = 木曜日
+ * 5 = 金曜日
+ * 6 = 土曜日
+ */
+const TARGET_DAYS = [
+  0, // 日
+  1, // 月
+  2, // 火
+  3, // 水
+  4, // 木
+  5, // 金
+  6, // 土
+];
+
+/**
+ * 未完了タスクが0件のときもメールを送るか
+ * true = 送る / false = 送らない（スキップ）
+ */
+const SEND_IF_EMPTY = false;
+
+// ============================================================
+//  ユーティリティ
+// ============================================================
+
+/**
+ * 日付値を "yyyy年mm月dd日（曜日）" 形式に変換する
+ * @param {*} value - セルの値（Date / 文字列 / 空）
+ * @returns {string}
+ */
+function formatDate(value) {
+  if (!value) return "期限なし";
+  const d = new Date(value);
+  if (isNaN(d.getTime())) return String(value);
+  const weekdays = ["日", "月", "火", "水", "木", "金", "土"];
+  const y   = d.getFullYear();
+  const m   = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  const w   = weekdays[d.getDay()];
+  return `${y}年${m}月${day}日（${w}）`;
+}
+
+/**
+ * 今日の日付を "m月d日（曜日）" 形式で返す
+ * @returns {string}
+ */
+function getTodayString() {
+  const today    = new Date();
+  const weekdays = ["日", "月", "火", "水", "木", "金", "土"];
+  const month    = today.getMonth() + 1;
+  const date     = today.getDate();
+  const dayName  = weekdays[today.getDay()];
+  return `${month}月${date}日（${dayName}）`;
+}
+
+// ============================================================
+//  ① 完了チェックで別シートへ自動移動（onEdit トリガー）
+// ============================================================
+
+/**
+ * チェックボックス（D列）をオンにすると
+ * その行を完了済みシートへ移動し、元の行を削除する
+ *
+ * ※ このトリガーは手動設定不要。スプレッドシートの編集時に自動起動します。
+ */
+function onEdit(e) {
+  const sheet = e.source.getActiveSheet();
+
+  // タスク一覧シート以外・D列以外・ヘッダー行は無視
+  if (sheet.getName() !== SHEET_NAME) return;
+  if (e.range.getColumn() !== 4)      return;
+  if (e.range.getRow()    === 1)      return;
+  if (e.value             !== "TRUE") return;
+
+  const row       = e.range.getRow();
+  const ss        = e.source;
+  const doneSheet = ss.getSheetByName(DONE_SHEET_NAME) || ss.insertSheet(DONE_SHEET_NAME);
+
+  // 行データを取得し、完了日を末尾に追加して移動先へ追記
+  const rowData     = sheet.getRange(row, 1, 1, 4).getValues()[0];
+  const completedAt = Utilities.formatDate(new Date(), "Asia/Tokyo", "yyyy/MM/dd");
+  rowData.push(completedAt);
+  doneSheet.appendRow(rowData);
+
+  // 元の行を削除（上に詰める）
+  sheet.deleteRow(row);
+}
+
+// ============================================================
+//  ② 指定曜日・指定時間にメール自動送信
+// ============================================================
+
+/**
+ * 時間トリガーから呼ばれるメイン関数
+ * TARGET_DAYS 以外の曜日・SEND_HOUR 以外の時間帯は何もしない
+ */
+function sendTaskEmail() {
+  const today     = new Date();
+  const dayOfWeek = today.getDay();
+  const hour      = today.getHours();
+
+  // 対象曜日・対象時間帯でなければ終了
+  if (!TARGET_DAYS.includes(dayOfWeek)) return;
+  if (hour !== SEND_HOUR)               return;
+
+  // スプレッドシートからデータ取得
+  const ss    = SpreadsheetApp.openById(SPREADSHEET_ID);
+  const sheet = ss.getSheetByName(SHEET_NAME);
+  const data  = sheet.getDataRange().getValues();
+
+  // 1行目（ヘッダー）を除いた未完了タスクのみ抽出
+  const tasks = data.slice(1).filter(row => row[3] !== true && row[0] !== "");
+
+  // タスクが0件のとき
+  if (tasks.length === 0) {
+    Logger.log("未完了タスクがありません");
+    if (!SEND_IF_EMPTY) return;
+  }
+
+  // 期限の昇順でソート（期限なしは末尾）
+  // 期限が同じ場合は重要度順（高→中→低）
+  const importanceOrder = { "高": 0, "中": 1, "低": 2 };
+  tasks.sort((a, b) => {
+    const dA = a[1] ? new Date(a[1]).getTime() : Infinity;
+    const dB = b[1] ? new Date(b[1]).getTime() : Infinity;
+    if (dA !== dB) return dA - dB;
+    return (importanceOrder[a[2]] ?? 9) - (importanceOrder[b[2]] ?? 9);
+  });
+
+  // メール本文を組み立て
+  const dateStr        = getTodayString();
+  const importanceMark = { "高": "★★★", "中": "★★☆", "低": "★☆☆" };
+
+  let body = `${dateStr} 本日のタスク一覧です。ご確認よろしくお願いいたします。\n`;
+  body    += "=".repeat(40) + "\n\n";
+
+  if (tasks.length === 0) {
+    body += "本日の未完了タスクはありません。\n\n";
+  } else {
+    for (const task of tasks) {
+      const title      = task[0] || "";
+      const deadline   = formatDate(task[1]);
+      const importance = task[2] || "－";
+      const mark       = importanceMark[importance] || "　";
+      body += `【${title}】　重要度：${importance}（${mark}）\n`;
+      body += `　　期限：${deadline}\n\n`;
+    }
+  }
+
+  body += "=".repeat(40) + "\n";
+  body += "※ このメールは自動送信されています。";
+
+  // 送信
+  const subject = `${dateStr} 本日のタスク一覧`;
+  GmailApp.sendEmail(SEND_TO, subject, body);
+  Logger.log(`送信完了：${subject}（${tasks.length}件）`);
+}

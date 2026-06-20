@@ -390,3 +390,72 @@ a `::before` layer avoids that trap.
   }
 }
 
+.task-automailer-gallery {
+  display: grid;
+  gap: 1.25rem;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.task-automailer-gallery--email {
+  grid-template-columns: 1fr;
+}
+
+.task-automailer-shot {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--ifm-background-surface-color);
+}
+
+.task-automailer-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.task-automailer-shot figcaption {
+  padding: 0.7rem 0.9rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--ifm-color-emphasis-700);
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* 受信画面は元画像が横長1行のため、表示用に余白付きで拡大済み */
+.task-automailer-shot--inbox img {
+  background: #f8fafc;
+  padding: 0.5rem;
+}
+
+[data-theme='dark'] .task-automailer-shot--inbox img {
+  background: #f8fafc;
+}
+
+.gas-code-details {
+  margin: 1rem 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 10px;
+  background: var(--ifm-background-surface-color);
+}
+
+.gas-code-details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  user-select: none;
+}
+
+.gas-code-details summary::-webkit-details-marker {
+  color: var(--ifm-color-primary);
+}
+
+.gas-code-details[open] summary {
+  margin-bottom: 0.75rem;
+}
+
+.gas-code-details .prism-code {
+  max-height: none;
+}
+

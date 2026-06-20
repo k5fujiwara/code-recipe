@@ -105,4 +105,4 @@ description: Code Recipe 運営者・藤原圭吾の経歴、指導実績、開�
 | MyReelsAutomation | note と HP の記事を取得し、Instagram 用カルーセル画像とキャプションを生成してカルーセル投稿 |
 | Shorts-Auto-Creator | 指定 RSS の記事から YouTube Shorts 向け動画を自動生成・自動投稿 |
 | ロト6予測ツール | 過去のロト6抽選データを機械学習で分析し、次回当選番号を予測する Web アプリ |
-| タスク自動管理 | スプレッドシートでタスクを登録し、GAS で自動取得して指定時刻にメール送信 |
+| タスク自動管理（Task AutoMailer） | スプレッドシートでタスクを登録し、GAS で指定曜日にメール自動送信 — [解説ページ](/docs/apps/task-automailer/) |

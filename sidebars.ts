@@ -141,7 +141,7 @@ const sidebars: SidebarsConfig = {
         type: 'doc',
         id: 'apps/index',
       },
-      items: ['apps/it1-code-pocket'],
+      items: ['apps/it1-code-pocket', 'apps/task-automailer'],
     },
   ],
   contestSidebar: [
