@@ -23,6 +23,9 @@ const baseUrl =
 const ogImageVersion = '20260613';
 const ogImageUrl = `${siteUrl}/img/ogp.jpg?v=${ogImageVersion}`;
 
+// Google AdSense（審査用・全ページの <head> に注入）
+const adsenseClientId = 'ca-pub-6924336257757707';
+
 const config: Config = {
   title: 'Code Recipe',
   tagline: 'マネして、学んで、作り出す。君だけの開発レシピ集。',
@@ -78,6 +81,14 @@ const config: Config = {
         property: 'og:image:secure_url',
         content: ogImageUrl,
       },
+    },
+  ],
+
+  scripts: [
+    {
+      src: `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`,
+      async: true,
+      crossorigin: 'anonymous',
     },
   ],
 
