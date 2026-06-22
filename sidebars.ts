@@ -24,6 +24,70 @@ const sidebars: SidebarsConfig = {
       items: [
         'development/github-signup',
         'development/project-setup-and-token',
+        'development/programming-languages',
+        'development/technology-selection',
+        'development/glossary',
+        {
+          type: 'category',
+          label: '言語ガイド',
+          link: {
+            type: 'doc',
+            id: 'development/languages/index',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'Web系',
+              items: [
+                'development/languages/html',
+                'development/languages/css',
+                'development/languages/javascript',
+                'development/languages/typescript',
+                'development/languages/php',
+                'development/languages/ruby',
+              ],
+            },
+            {
+              type: 'category',
+              label: '汎用・業務・データ',
+              items: [
+                'development/languages/python',
+                'development/languages/java',
+                'development/languages/csharp',
+                'development/languages/sql',
+                'development/languages/r',
+              ],
+            },
+            {
+              type: 'category',
+              label: '低レイヤー・サーバー・モバイル',
+              items: [
+                'development/languages/c',
+                'development/languages/cpp',
+                'development/languages/go',
+                'development/languages/rust',
+                'development/languages/swift',
+                'development/languages/kotlin',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'フレームワークガイド',
+          link: {
+            type: 'doc',
+            id: 'development/frameworks/index',
+          },
+          items: [
+            'development/frameworks/react-nextjs',
+            'development/frameworks/vue-nuxt',
+            'development/frameworks/node-express',
+            'development/frameworks/laravel',
+            'development/frameworks/rails',
+            'development/frameworks/django-fastapi',
+          ],
+        },
         'development/quiz-code-template',
         'development/accounts-and-api',
         'development/custom-domain-cloudflare',

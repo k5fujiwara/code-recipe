@@ -21,6 +21,11 @@ description: Code Recipe の開発系レシピ一覧
 
 - [GitHubの登録方法](/docs/development/github-signup/)
 - [プロジェクト立ち上げとトークン発行](/docs/development/project-setup-and-token/)
+- [プログラミング言語で何ができる？](/docs/development/programming-languages/)
+- [技術選定ガイド](/docs/development/technology-selection/)
+- [開発用語集](/docs/development/glossary/)
+- [言語ガイド](/docs/development/languages/)
+- [フレームワークガイド](/docs/development/frameworks/)
 - [学習クイズテンプレート QuizCode](/docs/development/quiz-code-template/)
 - [SNSやAPI連携の準備](/docs/development/accounts-and-api/)
 - [独自ドメイン設定（Cloudflare）](/docs/development/custom-domain-cloudflare/)
