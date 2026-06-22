@@ -96,6 +96,8 @@ print(greet("太郎"))
 | FastAPI | APIサーバー開発 |
 | Django | Webアプリ開発 |
 
+実用的な例として、[DataLupe](/docs/apps/datalupe/) はPython、Streamlit、pandas、plotlyを使って作ったCSVデータ分析Webアプリです。CSVをアップロードすると、データの概要、品質、統計、関係性、見るべきポイントを確認できます。
+
 ## ミニ演習: 点数の平均を出す
 
 ```python

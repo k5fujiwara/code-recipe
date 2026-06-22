@@ -15,6 +15,7 @@ Code Recipe の運営者が実際に開発し、公開・配布している Web 
 | 開発実例 | 役に立つ相手 | 使用技術 |
 | :--- | :--- | :--- |
 | **[IT1-CODE-POCKET](/docs/apps/it1-code-pocket/)** | 共通テスト「情報Ⅰ」第3問を対策したい高校生 | HTML5 / CSS3 / JavaScript / Tailwind CSS CDN / localStorage |
+| **[DataLupe](/docs/apps/datalupe/)** | CSV分析の入口で迷っている学習者・集計担当者 | Python / Streamlit / pandas / plotly |
 
 ## GAS ツール
 
