@@ -459,3 +459,105 @@ a `::before` layer avoids that trap.
   max-height: none;
 }
 
+/* 言語ガイドなど、見出し直後に比較表が続くカード型セクション */
+.theme-doc-markdown h3:has(+ table) {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-left: 5px solid var(--ifm-color-primary);
+  border-radius: 12px 12px 0 0;
+  background: linear-gradient(
+    90deg,
+    rgba(37, 115, 255, 0.13),
+    rgba(37, 115, 255, 0.04)
+  );
+  color: var(--ifm-color-primary-darkest);
+  font-size: 1.25rem;
+}
+
+.theme-doc-markdown h3:has(+ table) + table {
+  margin-top: 0;
+  border-top: 0;
+  table-layout: fixed;
+}
+
+.theme-doc-markdown h3:has(+ table) + table th:first-child,
+.theme-doc-markdown h3:has(+ table) + table td:first-child {
+  width: 10.5rem;
+  min-width: 10.5rem;
+  font-weight: 700;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.theme-doc-markdown h3:has(+ table) + table th:nth-child(2),
+.theme-doc-markdown h3:has(+ table) + table td:nth-child(2) {
+  width: auto;
+}
+
+[data-theme='dark'] .theme-doc-markdown h3:has(+ table) + table td:first-child {
+  color: var(--ifm-color-emphasis-900);
+}
+
+[data-theme='dark'] .theme-doc-markdown h3:has(+ table) {
+  background: linear-gradient(
+    90deg,
+    rgba(109, 180, 255, 0.2),
+    rgba(109, 180, 255, 0.06)
+  );
+  color: var(--ifm-color-primary-lightest);
+}
+
+.languageTrendGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0 2rem;
+}
+
+.languageTrendCard {
+  padding: 1rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 14px;
+  background: var(--ifm-background-surface-color);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.languageTrendCard h3 {
+  margin-top: 0;
+  margin-bottom: 0.55rem;
+  color: var(--ifm-color-primary-darkest);
+  font-size: 1.1rem;
+}
+
+.languageTrendCard p {
+  margin-bottom: 0;
+  color: var(--ifm-color-emphasis-800);
+  font-size: 0.96rem;
+  line-height: 1.75;
+}
+
+[data-theme='dark'] .languageTrendCard {
+  border-color: rgba(109, 180, 255, 0.28);
+  background: linear-gradient(
+    180deg,
+    rgba(25, 38, 63, 0.96),
+    rgba(15, 25, 43, 0.96)
+  );
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
+}
+
+[data-theme='dark'] .languageTrendCard h3 {
+  color: #d8ebff;
+}
+
+[data-theme='dark'] .languageTrendCard p {
+  color: #d7e2f2;
+}
+
+@media (max-width: 760px) {
+  .languageTrendGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
