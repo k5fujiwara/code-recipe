@@ -38,6 +38,7 @@ description: 目的別にプログラミング言語の基本、文法、フレ�
 | --- | --- |
 | ホームページを作りたい | [HTML](./html.md) / [CSS](./css.md) |
 | ボタンを押したら動く画面を作りたい | [JavaScript](./javascript.md) |
+| HTML/CSS/JavaScriptの実用例を見たい | [IT1-CODE-POCKET](/docs/apps/it1-code-pocket/) |
 | ReactやNext.jsを学びたい | [JavaScript](./javascript.md) → [TypeScript](./typescript.md) |
 | お問い合わせフォームやログインを作りたい | [PHP](./php.md) |
 | SNSや予約サイトのようなWebアプリを作りたい | [Ruby](./ruby.md) |
