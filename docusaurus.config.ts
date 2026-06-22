@@ -178,7 +178,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'appsSidebar',
           position: 'left',
-          label: '運営者のアプリ',
+          label: '開発実例',
         },
         {
           href: `https://github.com/${githubUserName}/${repositoryName}`,

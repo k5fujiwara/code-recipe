@@ -109,4 +109,4 @@ IT1-CODE-POCKET は現在 **Web アプリ** として公開しています。学
 ## 関連リンク
 
 - [IT1-CODE-POCKET を開く](https://it1-code-pocket.com/)
-- [運営者のアプリ一覧](./)
+- [開発実例一覧](./)

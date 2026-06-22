@@ -200,7 +200,7 @@ const sidebars: SidebarsConfig = {
   appsSidebar: [
     {
       type: 'category',
-      label: '運営者のアプリ',
+      label: '開発実例',
       link: {
         type: 'doc',
         id: 'apps/index',
