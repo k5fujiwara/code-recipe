@@ -27,6 +27,9 @@ const sidebars: SidebarsConfig = {
         'development/programming-languages',
         'development/technology-selection',
         'development/glossary',
+        'development/url-basics',
+        'development/http-https',
+        'development/domain-dns',
         {
           type: 'category',
           label: '言語ガイド',
