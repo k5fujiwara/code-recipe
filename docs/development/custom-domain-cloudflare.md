@@ -10,6 +10,8 @@ Code Recipe の独自ドメインは **code-recipes.com**（Cloudflare Registrar
 
 サイト名は **Code Recipe** ですが、取得できたドメインに合わせて URL は `code-recipes.com` を使います。
 
+URL、HTTP/HTTPS、DNS の基本を先に確認したい場合は、[URLの基本](/docs/development/url-basics/)、[HTTPとHTTPS](/docs/development/http-https/)、[ドメインとDNS](/docs/development/domain-dns/) を参照してください。
+
 ## 全体の流れ
 
 1. Cloudflare で DNS を設定する
