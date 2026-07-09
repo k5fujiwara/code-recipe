@@ -50,9 +50,69 @@ print(queue)
 - `append()` で後ろに追加します。
 - `popleft()` で先頭から取り出します。
 
-## 注意点
+## 計算量
 
-普通のリストで先頭を取り出すと遅くなることがあります。キューには `deque` を使うのが基本です。
+| 操作 | `deque` | 普通のリスト |
+| :--- | :--- | :--- |
+| 後ろに追加 | O(1) | O(1)（`append`） |
+| 先頭から取り出し | O(1) | O(n)（`pop(0)`） |
+
+普通のリストで `pop(0)` すると、残りの要素を全部1つずつ前にずらすため、データが多いほど遅くなります。キューには `deque` を使うのが基本です。
+
+## 別パターン1: キューを使った順番待ちの処理
+
+レジ待ちのように、「並んだ順に処理する」流れをそのまま書けます。
+
+```python
+from collections import deque
+
+waiting = deque(["Aさん", "Bさん", "Cさん"])
+
+while waiting:
+    person = waiting.popleft()
+    print(f"{person} を対応中")
+```
+
+- `deque(["Aさん", ...])` のように、最初から中身を入れて作れます。
+- `while waiting` は、キューが空になるまでくり返すという意味です。空の `deque` は `False` として扱われます。
+
+## 別パターン2: 幅優先探索でのキュー
+
+キューの代表的な使い道が[幅優先探索](/docs/algorithms/breadth-first-search/)です。「近い場所から順に調べる」動きは、キューの「先に入れたものから取り出す」性質そのものです。
+
+```python
+from collections import deque
+
+graph = {
+    "A": ["B", "C"],
+    "B": ["D"],
+    "C": ["D"],
+    "D": [],
+}
+
+queue = deque(["A"])
+visited = {"A"}
+
+while queue:
+    node = queue.popleft()
+    print(node)
+
+    for next_node in graph[node]:
+        if next_node not in visited:
+            visited.add(next_node)
+            queue.append(next_node)
+```
+
+- `visited` に追加してからキューに入れることで、同じ場所を2回調べないようにしています。
+- 取り出す順番が「A → B → C → D」になり、スタート地点から近い順に処理されます。
+
+## よくあるミス
+
+| ミス | 何が起きるか | 対処 |
+| :--- | :--- | :--- |
+| リストの `pop(0)` を使う | データが多いと極端に遅い | `deque` の `popleft()` を使う |
+| 空のキューから取り出す | `IndexError` で止まる | `while queue:` で空チェックしてから取り出す |
+| スタック（後入れ先出し）と混同する | 処理の順番が逆になる | 取り出し順が「入れた順」かを確認する |
 
 ## AOJで挑戦してみよう！
 
